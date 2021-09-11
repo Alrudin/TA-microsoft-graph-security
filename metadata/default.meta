@@ -1,0 +1,142 @@
+[props/source%3A%3A...ta-microsoft-graph-security%2A.log%2A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557440149.501454400
+
+[props/source%3A%3A...ta_microsoft_graph_security%2A.log%2A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557440149.753649700
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23configs%2Fconf-ta_microsoft_graph_security_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%601%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557451035.938503100
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23configs%2Fconf-ta_microsoft_graph_security_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%602%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557451035.981422100
+
+[ta_microsoft_graph_security_settings/additional_parameters]
+version = 7.2.6
+modtime = 1557451036.008899700
+
+[collections/TA_microsoft_graph_security_checkpointer]
+owner = splunk-system-user
+version = 7.2.6
+modtime = 1557450188.860005400
+
+[ta_microsoft_graph_security_settings/logging]
+version = 7.0.4
+modtime = 1559346457.316917000
+
+[eventtypes/GraphSecurityAlert]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557517916.982954800
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3ADemo_Data%60%60splunk_cred_sep%60%601%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864584.721493600
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3ADemo_Data%60%60splunk_cred_sep%60%602%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864584.765375700
+
+[inputs/microsoft_graph_security%3A%2F%2FDemo_Data]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864587.860904400
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademodata2%60%60splunk_cred_sep%60%601%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864848.147087100
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademodata2%60%60splunk_cred_sep%60%602%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864848.179037500
+
+[inputs/microsoft_graph_security%3A%2F%2Fdemodata2]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864849.793953300
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademodata3%60%60splunk_cred_sep%60%601%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864996.878261700
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademodata3%60%60splunk_cred_sep%60%602%3A]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864996.919133800
+
+[inputs/microsoft_graph_security%3A%2F%2Fdemodata3]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1557864998.510837000
+
+[tags/eventtype%3DGraphSecurityAlert]
+owner = edwardkoval
+version = 7.2.6
+modtime = 1558738629.890983400
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademo_data%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.0.4
+modtime = 1559589282.063014000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademo_data%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.0.4
+modtime = 1559589282.070714000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademo_data2%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.0.4
+modtime = 1559593383.403254000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security%23data%2Finputs%2Fmicrosoft_graph_security%3Ademo_data2%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.0.4
+modtime = 1559593383.410638000
+
+[collections/TA_microsoft_graph_security_add_on_for_splunk_checkpointer]
+owner = splunk-system-user
+version = 7.0.4
+modtime = 1559610837.330955000
+
+[props/GraphSecurityAlert]
+owner = admin
+version = 7.0.4
+modtime = 1564178433.105461000
+
+[app/install/state]
+version = 7.3.1.1
+modtime = 1579285484.754346100
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security-add-on-for-splunk%23data%2Finputs%2Fmicrosoft_graph_security%3Atest%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 7.0.4
+modtime = 1565718148.250954000
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-microsoft-graph-security-add-on-for-splunk%23data%2Finputs%2Fmicrosoft_graph_security%3Atest%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 7.0.4
+modtime = 1565718148.267335000
+
+[views/overview]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 7.3.1.1
+modtime = 1579544373.960552000
+
+[nav/default]
+version = 7.3.1.1
+modtime = 1579258593.097950500

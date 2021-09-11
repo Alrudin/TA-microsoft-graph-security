@@ -1,0 +1,136 @@
+<dashboard version="1.1">
+  <label>Overview</label>
+  <description>
+    Microsoft Graph Security API Add-On allows Splunk users to ingest all security alerts for their organization using the Microsoft Graph Security API. Supported products include Azure Advanced Threat Protection, Azure AD Identity Protection, Azure Security Center, Azure Sentinel, Azure Information Protection, Microsoft Cloud App Security, Office Advanced Threat Protection, Defender Advanced Threat Protection and many more - Refer to complete supported product list at http://aka.ms/graphsecurityalerts.
+  </description>
+  <row>
+    <panel>
+      <title>
+        IMPORTANT: Please read the instructions thoroughly, as the Configurations and Inputs have changed in the new version 1.1.0.
+      </title>
+      <html>
+        <hr></hr>
+        <h2><b>Configuring Microsoft Graph Security Data Inputs</b></h2>
+
+        <b><i>NOTE</i></b>: <b>Configuration</b> and <b>Inputs</b> have changed in the new version 1.1.0. In the previous version 0.1.1, Application ID and Client Secret are entered directly under the <b>Inputs</b> tab. In the new version 1.1.0, these app credentials won't appear under the <b>Input</b> tab but are required to create an app account under the <b>Configuration</b> tab. 
+		<ol>
+          <li>
+            From the list of Splunk apps, select <b>Microsoft Graph Security API Add-On for Splunk</b>.
+          </li>
+          <li>
+            Under the <b>Configuration</b> tab, select <b>Account</b> tab. Then click <b>Add</b> to create an account. Give your account a unique Account Name, and enter Application ID, Client Secret that you already registered.
+          </li>
+          <li>
+            Under the <b>Inputs</b> tab, select <b>Create New Input</b>.
+          </li>
+          <li>
+            Give your data input a unique name.
+          </li>
+          <li>
+            Set an interval greater or equal to 300 seconds. 
+          </li>
+          <li>
+            Select an index to store your alerts.
+          </li>
+          <li>
+            From the steps above, enter your Azure Tenant ID.
+          </li>
+          <li>
+            [Optional step] Set OData filter if needed – check list of <a href="https://aka.ms/graphsecuritycuratedqueries">curated query samples</a> for ready to use Microsoft Graph Security API queries.
+          </li>
+ 		  <li>
+            For App Account, select an account from the list of the app accounts you've already created under Configuration tab. 
+          </li>
+          <li>
+            Click <b>Add</b>.
+          </li>
+          <li>
+            Now you can search and create Splunk dashboards using your Microsoft Graph Security Alerts.
+          </li>
+        </ol>
+
+        <b><i>Note</i></b>: 
+        <ul>
+          <li>
+            The first time an input is created, it will pull as many Microsoft Graph Security alerts as possible. Then all subsequent requests will pull alerts with the lastModifiedDateTime between the set interval and the current time.
+          </li>
+          <li>
+            If you create multiple inputs, the Add-on will have a multiple data streams from the Microsoft Graph Security API resulting in duplicate alerts.
+          </li>
+        </ul>
+ 
+        <i>Optional</i>: <b>Configure Proxy settings</b>
+			If you have Splunk and relevant add-ons running behind a proxy server, follow these additional steps. Refer to the following diagram for details.
+		<ol>
+          <li>
+            Go to the <b>Configuration</b> tab of the add-on.
+          </li>
+           <li>
+             Enter your proxy information under the <b>Proxy</b> tab.
+          </li>
+           <li>
+             Click <b>Save</b>.
+          </li>
+        </ol>
+		The Add-on will now use your proxy settings.
+        <hr></hr>
+        <h2><b>Add-on Upgrade Guide</b></h2>
+        The following migration guide is supported for upgrading from version 0.1.1 to version 1.1.0. Upgrading this version requires removal of the older version 0.1.1 and a fresh installation of version 1.1.0. Refer to <a href="https://splunkbase.splunk.com/app/4564/#/details"> Details page</a> for complete guideline.
+        <ol>
+          <li>
+			Disable all your inputs before you upgrade the add-on. Otherwise you may see errors in the log files which may results data loss against your already configured inputs.
+          </li>
+          <li>
+            In Splunk home screen, on the left side sidebar, click the box with a <b>"+"</b> in the apps list, or click the gear icon next to <b>Apps</b> then select <b>Find more apps</b>.
+          </li>
+          <li>
+            Search for <b>Microsoft Graph Security</b> in the text box, find the <b>Microsoft Graph Security API Add-On for Splunk</b> and click <b>Install</b>. To learn more about where to install this add-on, please refer to the instructions below under <b>Where to install this add-on</b> section below.
+          </li>
+          <li>
+            If Splunk Enterprise prompts you to restart, do so. Then verify that the add-on appears in the list of apps and add-ons as shown in the diagram below.
+          </li>
+        </ol>
+        <hr></hr>
+        
+        <h2><b>Where to Install This Add-on</b></h2>
+
+        Unless otherwise noted, all supported add-ons can be safely installed to all tiers of a distributed Splunk platform deployment. See <a href="http://docs.splunk.com/Documentation/AddOns/latest/Overview/Wheretoinstall">Where to install Splunk add-ons</a> in Splunk Add-ons for more information.
+        
+        This table provides a reference for installing this specific add-on to a distributed deployment of Splunk Enterprise.
+        
+        <table>
+          <tr>
+            <th>Splunk platform component</th>
+            <th>Supported</th>
+            <th>Required</th>
+            <th>Comments</th>
+          </tr>
+          <tr>
+            <td>Search Heads</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>This add-on contains search-time knowledge. It is recommended to turn visibility off on your search heads to prevent data duplication errors that can result from running inputs on your search heads instead of (or in addition to) on your data collection node.</td>
+          </tr>
+          <tr>
+            <td>Heavy Forwarders</td>
+            <td>Yes</td>
+            <td>No (but recommended)</td>
+            <td>It is recommended to install this add-on on a heavy forwarder for data collection.  Data collection should be configured in only 1 place to avoid duplicates.</td>
+          </tr>
+          <tr>
+            <td>Indexers</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Not required as the parsing operations occur on the forwarders.</td>
+          </tr>
+          <tr>
+            <td>Universal Forwarders</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Universal forwarders are not supported for data collection because the modular inputs require Python and the Splunk REST handler. </td>
+          </tr>
+      	</table>
+      </html>
+    </panel>
+  </row>
+</dashboard>
